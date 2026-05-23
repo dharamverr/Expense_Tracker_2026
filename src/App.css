@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+main {
+  padding: 4rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.form-table-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+ .error {
+    font-size: small;
+    color: red;
+    position: absolute;
+    bottom: -10px;
+ } 
+
+.input-container > input {
+  margin-bottom: 7px;
+  padding: 4px;
+}
+
+button {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  align-self: flex-start;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+/* td {
+  padding: 0.5rem;
+} */
+
+/* th {
+  padding-left: 1rem;
+  text-align: left;
+} */
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+select,option,button {
+  padding: 4px;
+  margin-bottom: 7px;
+}
+
+
+.table-cell {
+  padding: 0;
+
+}
+#select-category {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 1rem;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+#select-category:focus {
+  border: none;
+  outline: none;
+}
+.context-menu {
+  background-color: rgb(252, 252, 252);
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 12px rgb(50, 50, 50);
+  overflow: hidden;
+}
+
+.context-menu > div {
+  padding: 4px 4px 0 4px;
+
+}
+
+.context-menu > div:hover {
+  background-color: rgb(206, 206, 206);
+  cursor: pointer;
+}
+
+svg:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  main {
+  padding: 3rem;
+  font-size: 1.3rem;
+  gap: 2rem;
+}
+  h1 {
+    font-size: large;
+  }
+  .form-table-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media ( max-width: 340px) {
+  main {
+  padding: 2rem;
+  font-size: 1.2rem;
+  gap: 2rem;
+}
+}
