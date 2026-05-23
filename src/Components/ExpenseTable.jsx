@@ -47,9 +47,10 @@ export default function ExpenseTable({
       >
         <thead>
           <tr>
-            <th className="title">
+            <th className="table-heading">
               <span>Title</span>
-              <svg
+             <div className="title">
+               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="up-arrow"
                 width="17"
@@ -111,6 +112,7 @@ export default function ExpenseTable({
                   strokeLinecap="round"
                 />
               </svg>
+             </div>
             </th>
             <th className="table-cell">
               <select
@@ -125,9 +127,10 @@ export default function ExpenseTable({
                 <option value="Bill">Bill</option>
               </select>
             </th>
-            <th className="title">
+            <th className="table-heading">
               <span>Amount</span>
-              <svg
+              <div  className="title">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="up-arrow"
                 width="17"
@@ -185,6 +188,7 @@ export default function ExpenseTable({
                   strokeLinecap="round"
                 />
               </svg>
+              </div>
             </th>
             <th>Action</th>
           </tr>
@@ -202,8 +206,9 @@ export default function ExpenseTable({
               <td>{expense.title}</td>
               <td>{expense.category}</td>
               <td>₹ {expense.amount}</td>
-              <td>
-                <svg
+              <td >
+                <div className="action-icons">
+                  <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="17"
@@ -267,6 +272,7 @@ export default function ExpenseTable({
                     <path d="M432 96h-48V32c0-17.672-14.328-32-32-32H160c-17.672 0-32 14.328-32 32v64H80c-17.672 0-32 14.328-32 32v32h416v-32c0-17.672-14.328-32-32-32zm-240 0V64h128v32zM80 480.004C80 497.676 94.324 512 111.996 512h288.012C417.676 512 432 497.676 432 480.008V192H80zM320 272c0-8.836 7.164-16 16-16s16 7.164 16 16v160c0 8.836-7.164 16-16 16s-16-7.164-16-16zm-80 0c0-8.836 7.164-16 16-16s16 7.164 16 16v160c0 8.836-7.164 16-16 16s-16-7.164-16-16zm-80 0c0-8.836 7.164-16 16-16s16 7.164 16 16v160c0 8.836-7.164 16-16 16s-16-7.164-16-16z"></path>
                   </g>
                 </svg>
+                </div>
               </td>
             </tr>
           ))}
